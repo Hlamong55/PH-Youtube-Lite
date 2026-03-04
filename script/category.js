@@ -13,7 +13,9 @@ const removeActiveBtn = () => {
   }
 };
 
-// load Categories
+
+
+// load all Categories
 const loadCategoriesVideo = (id) => {
   fetch(`https://openapi.programming-hero.com/api/phero-tube/category/${id}`)
     .then((res) => res.json())
@@ -33,6 +35,8 @@ const handleAllVideos = () => {
   loadVideos(); // fetch all videos again
 };
 
+
+
 // show the all
 const showCategories = (categories) => {
   const catergory = document.getElementById("category-id");
@@ -46,6 +50,7 @@ const showCategories = (categories) => {
   `;
   catergory.appendChild(allButton);
 
+
   // Add other category buttons
   categories.forEach((element) => {
     const button = document.createElement("div");
@@ -57,6 +62,7 @@ const showCategories = (categories) => {
     catergory.appendChild(button);
   });
 };
+
 
 // --------------------------------------------------------
 let allVideos = [];
