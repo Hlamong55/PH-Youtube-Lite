@@ -64,6 +64,8 @@ const showCategories = (categories) => {
 };
 
 
+
+
 // --------------------------------------------------------
 let allVideos = [];
 const loadVideos = () => {
@@ -102,7 +104,7 @@ const showVideos = (videos) => {
       src=${video.thumbnail}
       alt="Shoes" />
   </figure>
-  <div class="flex gap-2 px-2 py-3">
+  <div class="flex gap-2.5 px-2 py-3">
    <div>
    <img class="w-8 h-8 rounded-full object-cover" src=${
      video.authors[0].profile_picture
@@ -112,7 +114,7 @@ const showVideos = (videos) => {
    <h1 class="font-bold">${video.title}</h1>
 <div class="flex gap-2 items-center">
 <p class="text-gray-400 text-sm">${video.authors[0].profile_name}</p>
-   <div class="flex gap-2 items-center">
+   <div class="flex gap-2.5 items-center">
             ${
               isVerified
                 ? `<img class="w-5 h-5 object-cover" src="https://img.icons8.com/puffy-filled/32/verifed.png" alt="Verified"/>`
@@ -131,6 +133,7 @@ const showVideos = (videos) => {
     videoId.appendChild(videoContainer);
   });
 };
+
 
 document.getElementById("search").addEventListener("keyup", (e) => {
   const searchText = e.target.value.toLowerCase();
