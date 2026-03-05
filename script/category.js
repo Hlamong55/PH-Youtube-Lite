@@ -122,7 +122,7 @@ const showVideos = (videos) => {
           </div>
           
 </div>
-<p class="text-gray-400 text-sm">${video.others.views} viwes</p>
+<p class="text-gray-500 text-sm">${video.others.views} viwes</p>
    </div>
    
   </div>
@@ -139,6 +139,7 @@ document.getElementById("search").addEventListener("keyup", (e) => {
   );
   showVideos(filtered);
 });
+
 
 loadCategories();
 loadVideos();
